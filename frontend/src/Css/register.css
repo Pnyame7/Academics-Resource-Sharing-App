@@ -1,0 +1,157 @@
+/* Global Styles */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.registerBody {
+  width: 100%;
+  background-image: linear-gradient(
+      to left,
+      rgba(103, 231, 237, 0.25),
+      transparent
+    ),
+    url("../assets/Images/login_background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.Register_page {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.main_interface {
+  width: 75%;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  justify-items: center;
+  margin-top: 70px;
+}
+
+.left_side {
+  background-color: #a4d9f5;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.left_side p:nth-of-type(1) {
+  text-align: center;
+  margin-right: 10px;
+  font-weight: bold;
+  font-size: x-large;
+  color: #111;
+}
+
+.left_side p:nth-of-type(2) {
+  text-align: center;
+  margin-top: 3px;
+  color: #111;
+}
+
+.right_side {
+  background-color: white;
+  width: 50%;
+  padding-bottom: 50px;
+}
+
+.knust_logo img {
+  width: 140px;
+  height: 130px;
+  margin-left: 205px;
+}
+
+.knust_logo p {
+  color: rgb(6, 133, 38);
+  font-weight: bold;
+
+  text-align: center;
+}
+
+.Register_inputs {
+  margin-top: 50px;
+}
+
+#Student_id,
+#password,
+#username,
+#email,
+#password_confirm {
+  width: 400px;
+  margin-left: 50px;
+  font-size: 16px;
+  font-family: "poppins";
+  color: #333;
+
+  border: 0.2px solid #999;
+  background: transparent;
+  padding: 8px;
+}
+
+.input_group {
+  margin-bottom: 30px;
+}
+
+.username_input p,
+.password_input p,
+.student_ID_input p,
+.email_input p,
+.password_confirm_input p {
+  margin-left: 50px;
+  margin-bottom: 10px;
+}
+
+#Student_id:focus,
+#password:focus,
+#username:focus,
+#email:focus,
+#password_confirm:focus {
+  outline: none;
+}
+
+.login_button {
+  width: 400px;
+  color: white;
+  padding: 10px;
+  margin-left: 50px;
+  background-color: rgb(27, 179, 110);
+  outline: none;
+  border: none;
+}
+
+.login_button:hover {
+  background-color: rgb(70, 220, 152);
+}
+
+.register_info {
+  margin-top: 10px;
+  margin-left: 130px;
+  font-size: small;
+}
+
+.register_info .loginLink {
+  font-size: x-large;
+  margin-left: 5px;
+  color: rgb(27, 179, 110);
+  text-decoration: none;
+}
+
+.register_info .loginLink:hover {
+  color: rgb(3, 117, 66);
+}
+
+.copy_right {
+  text-align: center;
+  font-size: small;
+  color: rgb(4, 138, 35);
+  margin-top: 40px;
+}

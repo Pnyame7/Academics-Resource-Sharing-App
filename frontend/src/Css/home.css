@@ -1,0 +1,435 @@
+/* Global Styles */
+
+.fontAw {
+  color: #333;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body,
+html {
+  height: 100%;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Navigation bar Styles */
+.navbar {
+  background-color: white;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  position: relative;
+  width: 100%;
+  height: 60px;
+  top: 0;
+  z-index: 3;
+  border-bottom: 1px solid;
+  box-shadow: 5px 2px 2px 0.5px rgba(0, 0, 0, 0.3);
+}
+
+.navigationbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.sidebar {
+  position: fixed;
+  top: 30px;
+  left: 0;
+  width: 150px;
+  height: 150px;
+  z-index: 99;
+  background-color: #222222c5;
+  backdrop-filter: blur(10px);
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+  display: none;
+}
+
+.sidebar ul {
+  margin-top: 5px;
+}
+
+.sidebar li {
+  margin-top: 15px;
+  width: 100%;
+}
+
+.sidebar li a {
+  text-decoration: none;
+  color: white;
+  margin-left: 5px;
+  width: 100%;
+}
+
+.sidebar li a span {
+  margin-left: 120px;
+}
+
+.sidebar a:hover {
+  color: rgba(223, 69, 223, 0.612);
+}
+
+.navleft {
+  display: flex;
+  align-items: center;
+}
+
+.navleft a {
+  color: #333;
+}
+
+.navleft p:nth-of-type(1) {
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+  font-size: 18px;
+  color: #333;
+}
+
+.navleft p:nth-of-type(2) {
+  color: rgb(12, 88, 201);
+  display: flex;
+  align-items: center;
+}
+
+.navleft i {
+  margin-right: 10px;
+}
+.navleft img {
+  width: 60px;
+  background-color: #333;
+}
+
+/* Search bar Styles */
+
+.search {
+  background-image: url("../assets/Images/nicepaper.jpg");
+  width: max-content;
+  display: flex;
+  align-items: center;
+  padding: 14px;
+  border-radius: 28px;
+  transition: box-shadow 0.25s;
+}
+
+.search:focus-within {
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.75);
+}
+
+.search-input {
+  font-size: 16px;
+  font-family: "poppins";
+  color: #333;
+  margin-left: 14px;
+  outline: none;
+  border: none;
+  background: transparent;
+  width: 500px;
+}
+
+.search-input::placeholder,
+.search-icon {
+  color: #999;
+}
+
+/* Nav Right Styles */
+
+.navright {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 400px;
+}
+
+.navright a {
+  text-decoration: none;
+}
+
+.home,
+.about {
+  color: #333;
+}
+
+.registration {
+  width: 200px;
+  display: flex;
+  align-items: center;
+}
+
+.login {
+  padding: 12px;
+  background-color: white;
+  border: 1px solid #333;
+  color: #333;
+  margin-right: 5px;
+  width: 80px;
+}
+
+.register {
+  padding: 12px;
+  background-color: #222;
+  border: 1px solid #333;
+  color: white;
+  width: 80px;
+}
+
+.navleft a:hover,
+.home:hover,
+.about:hover {
+  color: purple;
+  text-decoration: underline;
+}
+
+.login:hover {
+  background-image: url("../assets/Images/nicepaper.jpg");
+}
+
+.register:hover {
+  background-color: #333;
+}
+
+/* Container Styles */
+
+.container {
+  position: relative;
+  width: 100%;
+  /* height: 100vh; */
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.backgroundclip {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#background-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: white;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  margin-top: 250px;
+}
+
+.content h1 {
+  text-align: center;
+}
+
+/* Purpose Styles */
+
+.purpose {
+  width: 80%;
+  background-color: rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
+  margin: 30px auto;
+  outline: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.mission_vision_goal_content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin: auto;
+}
+
+.mission {
+  background-color: #222;
+  color: white;
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.vision {
+  background-color: #222;
+  color: white;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.goals {
+  background-color: #222;
+  color: white;
+  border-radius: 10px;
+}
+
+.mission,
+.goals,
+.vision {
+  width: 25%;
+  padding: 20px;
+}
+
+.purpose h1,
+.vision h2,
+.mission h2,
+.goals h2 {
+  text-align: center;
+}
+
+.goals ul {
+  list-style-type: circle;
+}
+
+.features {
+  width: 50%;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  margin: auto;
+  padding-left: 110px;
+  padding-bottom: 10px;
+  list-style-position: inside;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  outline: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.features h2 {
+  padding-left: 200px;
+}
+
+.features_list {
+  display: flex;
+  justify-content: center;
+}
+
+/* Testimonials of the website */
+
+.testimonials {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  margin-top: 50px;
+  padding: 5px;
+  width: 80%;
+  margin: auto;
+  margin-top: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  outline: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.testimonials h1 {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.Jane_doe,
+.Mary_Johnson,
+.John_smith {
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  margin-bottom: 50px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  outline: 1px solid rgba(0, 0, 0, 0.5);
+  width: 60%;
+  margin-left: 150px;
+  border-radius: 15px;
+  padding: 10px;
+}
+
+.Jane_doe img,
+.Mary_Johnson img,
+.John_smith img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.footer-container {
+  width: 100%;
+  background-color: #222;
+  color: white;
+  margin-top: 30px;
+  font-family: "poppins", sans-serif;
+  padding: 10px;
+  font-size: 13px;
+}
+
+.footer-contact {
+  border: 1px solid white;
+  outline: 1px solid white;
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  padding: 25px;
+  margin: auto;
+  align-items: center;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.footer-links {
+  margin-left: 150px;
+}
+
+.footer-links ul li {
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: rgba(255, 255, 255);
+}
+
+.footer-links a:hover {
+  color: rgb(203, 50, 203);
+  text-decoration: underline;
+}
+
+.footer-links h3 {
+  margin-bottom: 20px;
+}
+
+.footer-about {
+  margin-bottom: 20px;
+}
+.footer-about p {
+  font-size: 14px;
+  text-align: center;
+}
+
+.footer-about h3 {
+  text-align: center;
+  font-size: 18px;
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 11px;
+}
