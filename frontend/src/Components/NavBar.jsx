@@ -1,17 +1,37 @@
 import React, { useState } from "react";
+import axios from "axios";
 import COSLogo from "../assets/Images/coslogo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useSnackbar } from "notistack";
 import "../Css/home.css";
+import { useAuthContext } from "./authContext";
 
 export default function NavBar() {
   const [showMenu, setShowMenu] = useState(true);
+  const navigate = useNavigate();
+  const { enqueueSnackbar } = useSnackbar();
+  const { auth } = useAuthContext();
+  const { setAuth } = useAuthContext();
+
+  const handleLogout = async () => {
+    try {
+      await axios.get("http://localhost:3000/account/logout", {
+        withCredentials: true,
+      });
+      localStorage.removeItem("auth");
+      setAuth(null);
+      navigate("/login");
+    } catch (error) {
+      enqueueSnackbar(error.response.data.msg, { variant: "error" });
+    }
+  };
 
   function handleMenu() {
     setShowMenu((prev) => !prev);
   }
-
+  console.log("Data: ", auth);
   return (
     <div>
       <header>
@@ -62,12 +82,16 @@ export default function NavBar() {
               </Link>
 
               <div class="registration">
-                <Link to="/login" class={"login"}>
-                  Log In
+                <Link onClick={handleLogout} class={"login"}>
+                  {auth ? "Log Out" : "Log In"}
                 </Link>
-                <Link to="/register" class="register">
-                  Register
-                </Link>
+                {auth ? (
+                  ""
+                ) : (
+                  <Link to="/register" class="register">
+                    Register
+                  </Link>
+                )}
               </div>
             </div>
           </nav>

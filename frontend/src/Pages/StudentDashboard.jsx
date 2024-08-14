@@ -1,91 +1,16 @@
 import React from "react";
 import "../Css/studentDashboard.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useSnackbar } from "notistack";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
+import SideBar from "../Components/SideBar";
 
 export default function StudentDashboard() {
   return (
     <div className="studentBody">
       <div class="sidebar_container">
-        <nav className="studentNav">
-          <p>Student Dashboard</p>
-          <ul>
-            <li>
-              <Link to="">
-                <img
-                  src="/Assets/Images/Dashboard.png"
-                  alt=""
-                  class="dashboard"
-                />
-                <span class="img-text">Dashboard</span>
-              </Link>
-            </li>
-            <li>
-              <Link to="">
-                <img src="/Assets/Images/Forum.png" alt="" class="forum" />
-                <span class="img-text">Discussion Forum</span>
-              </Link>
-            </li>
-            <li>
-              <Link to="">
-                <img
-                  src="/Assets/Images/Notification.png"
-                  alt=""
-                  class="notification"
-                />
-                <span class="img-text">Notification</span>
-              </Link>
-            </li>
-            <li>
-              <Link to="">
-                <img
-                  src="/Assets/Images/Notification.png"
-                  alt=""
-                  class="notification"
-                />
-                <span class="img-text">Study Group</span>
-              </Link>
-            </li>
-            <li>
-              <Link to="">
-                <img
-                  src="/Assets/Images/Notification.png"
-                  alt=""
-                  class="notification"
-                />
-                <span class="img-text">Feedback & Support</span>
-              </Link>
-            </li>
-            <li>
-              <Link to="">
-                <img
-                  src="/Assets/Images/Notification.png"
-                  alt=""
-                  class="notification"
-                />
-                <span class="img-text">Upload Resource</span>
-              </Link>
-            </li>
-            <li>
-              <Link to="">
-                <img
-                  src="/Assets/Images/Notification.png"
-                  alt=""
-                  class="notification"
-                />
-                <span class="img-text">Profile</span>
-              </Link>
-            </li>
-            <li>
-              <Link to="">
-                <img src="/Assets/Images/Logout.png" alt="" class="logout" />
-                <span class="img-text">Logout</span>
-              </Link>
-            </li>
-          </ul>
-        </nav>
-
+        <SideBar />
         <div class="main-content">
           <span class="dashboard_up_text">Dashboard</span>
           <h3 class="up-text">Access Your Academic resource Here </h3>

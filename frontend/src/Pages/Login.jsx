@@ -1,9 +1,45 @@
-import React from "react";
+import React, { useState } from "react";
+import axios from "axios";
+import { useSnackbar } from "notistack";
 import COSLogo from "../assets/Images/COS LOG.png";
 import Logo from "../assets/Images/logo.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useAuthContext } from "../Components/authContext";
 
 export default function Login() {
+  const [username, setUserName] = useState("");
+  const [studentID, setStudentID] = useState("");
+  const [password, setPassword] = useState("");
+  const navigate = useNavigate();
+  const { enqueueSnackbar } = useSnackbar();
+  const { setAuth } = useAuthContext();
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const res = await axios.post(
+        "http://localhost:3000/account/login",
+        {
+          username,
+          studentID,
+          password,
+        },
+        { withCredentials: true },
+        { body: JSON.stringify({ username, studentID, password }) }
+      );
+
+      const data = res.data.token;
+
+      localStorage.setItem("auth", data);
+      setAuth(localStorage);
+
+      enqueueSnackbar(res.data.msg, { variant: "success" });
+      navigate("/student/dashboard");
+    } catch (error) {
+      console.log("ERROR: ", error.response.data.msg);
+      enqueueSnackbar(error.response.data.msg, { variant: "error" });
+    }
+  };
   return (
     <div>
       <div class="login_page">
@@ -22,45 +58,51 @@ export default function Login() {
               <img src={Logo} alt="" />
               <p>Login</p>
             </div>
+            <form onSubmit={handleSubmit}>
+              <div class="login_inputs">
+                <div class=" input_group  username_input">
+                  <p>Username</p>
+                  <input
+                    type="text"
+                    id="username"
+                    name="username"
+                    pattern="[A-Za-z0-9]+"
+                    title="Username must contain only letters and numbers"
+                    // required
+                    placeholder="eg. username"
+                    value={username}
+                    onChange={(e) => setUserName(e.target.value)}
+                  />
+                </div>
 
-            <div class="login_inputs">
-              <div class=" input_group  username_input">
-                <p>Username</p>
-                <input
-                  type="text"
-                  id="username"
-                  name="username"
-                  pattern="[A-Za-z0-9]+"
-                  title="Username must contain only letters and numbers"
-                  required
-                  placeholder="eg. username"
-                />
+                <div class=" input_group  password_input">
+                  <p>Password</p>
+                  <input
+                    type="password"
+                    name="password"
+                    id="password"
+                    placeholder="Enter passsword"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                  />
+                </div>
+
+                <div class=" input_group  student_ID_input">
+                  <p>Student ID</p>
+                  <input
+                    type="number"
+                    name="Student_ID"
+                    id="Student_id"
+                    placeholder="eg. 00000000"
+                    value={studentID}
+                    onChange={(e) => setStudentID(e.target.value)}
+                  />
+                </div>
               </div>
-
-              <div class=" input_group  password_input">
-                <p>Password</p>
-                <input
-                  type="password"
-                  name="password"
-                  id="password"
-                  placeholder="Enter passsword"
-                />
-              </div>
-
-              <div class=" input_group  student_ID_input">
-                <p>Student ID</p>
-                <input
-                  type="password"
-                  name="Student_ID"
-                  id="Student_id"
-                  placeholder="eg. 00000000"
-                />
-              </div>
-            </div>
-            <button class="login_button" type="submit">
-              Log In
-            </button>
-
+              <button class="login_button" type="submit">
+                Log In
+              </button>
+            </form>
             <p class="register_info">
               Don't have an account?{" "}
               <Link to="/register" class="loginLink">
