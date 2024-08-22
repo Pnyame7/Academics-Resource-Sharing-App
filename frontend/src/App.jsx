@@ -8,6 +8,7 @@ import Login from "./Pages/Login";
 import Profile from "./Pages/Profile";
 import StudentDashboard from "./Pages/StudentDashboard";
 import DiscussionForum from "./Pages/DiscussionForum";
+import Feedback from "./Pages/Feedback";
 import { useAuthContext } from "./Components/authContext";
 function App() {
   const { auth } = useAuthContext();
@@ -24,6 +25,7 @@ function App() {
         element={<StudentDashboard />}
       />
       <Route path="/discussionforum" element={<DiscussionForum />} />
+      <Route path="/feedback" element={<Feedback />} />
     </Routes>
   );
 }

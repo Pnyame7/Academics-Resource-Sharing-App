@@ -67,7 +67,7 @@ export default function SideBar() {
             </Link>
           </li>
           <li>
-            <Link to="">
+            <Link to="/feedback">
               <img
                 src="/Assets/Images/Notification.png"
                 alt=""

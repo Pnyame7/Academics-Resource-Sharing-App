@@ -16,7 +16,7 @@ export const Login = async (req, res, next) => {
       if (validPassword) {
         // User logged in successfully, create a JWT
         const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, {
-          expiresIn: "1h",
+          expiresIn: "7d",
         });
 
         // Set the JWT as a cookie on the client's browser

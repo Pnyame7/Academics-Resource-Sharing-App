@@ -38,8 +38,6 @@ export const CreateMessage = async (req, res) => {
     const { message } = req.body;
     const { id: topicId } = req.params;
     const userId = req.user._id;
-    console.log("Topic Id is: ", topicId);
-    console.log("None Error");
 
     const topic = await Topic.findById(topicId);
 
