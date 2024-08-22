@@ -242,6 +242,11 @@ html {
 
 .content h1 {
   text-align: center;
+  font-size: 40px;
+}
+
+.content p {
+  font-size: 25px;
 }
 
 /* Purpose Styles */
@@ -358,6 +363,12 @@ html {
   margin-left: 150px;
   border-radius: 15px;
   padding: 10px;
+}
+
+.Jane_doe p,
+.Mary_Johnson p,
+.John_smith p {
+  width: 65%;
 }
 
 .Jane_doe img,

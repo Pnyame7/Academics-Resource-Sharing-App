@@ -25,7 +25,8 @@ export default function SideBar() {
     }
   };
   return (
-    <div>
+    <div className="h-screen overflow-y-auto overflow-x-hidden sticky top-0">
+      {/* // <div> */}
       <nav className="studentNav">
         <p>Student Dashboard</p>
         <ul>
@@ -40,7 +41,7 @@ export default function SideBar() {
             </Link>
           </li>
           <li>
-            <Link to="">
+            <Link to="/discussionforum">
               <img src="/Assets/Images/Forum.png" alt="" class="forum" />
               <span class="img-text">Discussion Forum</span>
             </Link>

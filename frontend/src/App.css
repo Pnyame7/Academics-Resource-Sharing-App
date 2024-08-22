@@ -1,4 +1,8 @@
 /* fallback */
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
 @font-face {
   font-family: "Material Symbols Outlined";
   font-style: normal;

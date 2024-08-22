@@ -66,7 +66,6 @@ export default function Login() {
                     type="text"
                     id="username"
                     name="username"
-                    pattern="[A-Za-z0-9]+"
                     title="Username must contain only letters and numbers"
                     // required
                     placeholder="eg. username"

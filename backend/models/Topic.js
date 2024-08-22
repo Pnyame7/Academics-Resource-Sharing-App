@@ -7,6 +7,18 @@ const topicSchema = mongoose.Schema(
       require: true,
       unique: true,
     },
+    userId: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "User",
+      required: true,
+    },
+    messages: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "DiscussionForum",
+        default: [],
+      },
+    ],
   },
   { timestamps: true }
 );

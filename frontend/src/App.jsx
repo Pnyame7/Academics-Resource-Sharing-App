@@ -7,6 +7,7 @@ import Register from "./Pages/Register";
 import Login from "./Pages/Login";
 import Profile from "./Pages/Profile";
 import StudentDashboard from "./Pages/StudentDashboard";
+import DiscussionForum from "./Pages/DiscussionForum";
 import { useAuthContext } from "./Components/authContext";
 function App() {
   const { auth } = useAuthContext();
@@ -22,6 +23,7 @@ function App() {
         // element={auth ? <StudentDashboard /> : <Login />}
         element={<StudentDashboard />}
       />
+      <Route path="/discussionforum" element={<DiscussionForum />} />
     </Routes>
   );
 }
