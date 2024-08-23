@@ -6,6 +6,19 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 import SideBar from "../Components/SideBar";
 
+import ActurialScience from "../assets/Images/acturial_science.jpg";
+import ComputerScience from "../assets/Images/Computer_science_logo.jpg";
+import Biochemistry from "../assets/Images/biochemistry_logo.png";
+import BiologicalScience from "../assets/Images/biological_science_logo.jpg";
+import Chemistry from "../assets/Images/chemistry_logo.jpg";
+import EnvironmentalScience from "../assets/Images/environmental_science_logo.jpg";
+import FoodScience from "../assets/Images/food_science_logo.jpg";
+import Mathematics from "../assets/Images/mathematics_logo.png";
+import Meteorology from "../assets/Images/meteorology.jpg";
+import Optometry from "../assets/Images/optometry_logo.jpg";
+import Physics from "../assets/Images/physics_logo.jpeg";
+import Statistics from "../assets/Images/statistics_logo.jpg";
+
 export default function StudentDashboard() {
   return (
     <div className="studentBody">
@@ -22,7 +35,7 @@ export default function StudentDashboard() {
             >
               <div class="main">
                 <div class="card">
-                  <img src="/Assets/Images/acturial_science.jpg" class="logo" />
+                  <img src={ActurialScience} class="logo" />
                   <h3>Actuarial Science Department</h3>
                 </div>
               </div>
@@ -33,10 +46,7 @@ export default function StudentDashboard() {
             >
               <div class="main">
                 <div class="card">
-                  <img
-                    src="/Assets/Images/Computer_science_logo.jpg"
-                    class="logo"
-                  />
+                  <img src={ComputerScience} class="logo" />
                   <h3>Computer Science Department</h3>
                 </div>
               </div>
@@ -47,10 +57,7 @@ export default function StudentDashboard() {
             >
               <div class="main">
                 <div class="card">
-                  <img
-                    src="/Assets/Images/biochemistry_logo.png"
-                    class="logo"
-                  />
+                  <img src={Biochemistry} class="logo" />
                   <h3>Biochemistry Department</h3>
                 </div>
               </div>
@@ -61,10 +68,7 @@ export default function StudentDashboard() {
             >
               <div class="main">
                 <div class="card">
-                  <img
-                    src="/Assets/Images/biological_science_logo.jpg"
-                    class="logo"
-                  />
+                  <img src={BiologicalScience} class="logo" />
                   <h3>Biological Science Department</h3>
                 </div>
               </div>
@@ -76,7 +80,7 @@ export default function StudentDashboard() {
             >
               <div class="main">
                 <div class="card">
-                  <img src="/Assets/Images/chemistry_logo.jpg" class="logo" />
+                  <img src={Chemistry} class="logo" />
                   <h3>Chemistry Department</h3>
                 </div>
               </div>
@@ -87,10 +91,7 @@ export default function StudentDashboard() {
             >
               <div class="main">
                 <div class="card">
-                  <img
-                    src="/Assets/Images/environmental_science_logo.jpg"
-                    class="logo"
-                  />
+                  <img src={EnvironmentalScience} class="logo" />
                   <h3>Environmental Science Department</h3>
                 </div>
               </div>
@@ -101,10 +102,7 @@ export default function StudentDashboard() {
             >
               <div class="main">
                 <div class="card">
-                  <img
-                    src="/Assets/Images/food_science_logo.jpg"
-                    class="logo"
-                  />
+                  <img src={FoodScience} class="logo" />
                   <h3>Food Science Department</h3>
                 </div>
               </div>
@@ -115,7 +113,7 @@ export default function StudentDashboard() {
             >
               <div class="main">
                 <div class="card">
-                  <img src="/Assets/Images/mathematics_logo.png" class="logo" />
+                  <img src={Mathematics} class="logo" />
                   <h3>Mathematics Department</h3>
                 </div>
               </div>
@@ -127,7 +125,7 @@ export default function StudentDashboard() {
             >
               <div class="main">
                 <div class="card">
-                  <img src="/Assets/Images/meteorology.jpg" class="logo" />
+                  <img src={Meteorology} class="logo" />
                   <h3>Meteorology Department</h3>
                 </div>
               </div>
@@ -138,7 +136,7 @@ export default function StudentDashboard() {
             >
               <div class="main">
                 <div class="card">
-                  <img src="/Assets/Images/optometry_logo.jpg" class="logo" />
+                  <img src={Optometry} class="logo" />
                   <h3>Optometry Department</h3>
                 </div>
               </div>
@@ -149,7 +147,7 @@ export default function StudentDashboard() {
             >
               <div class="main">
                 <div class="card">
-                  <img src="/Assets/Images/physics_logo.jpeg" class="logo" />
+                  <img src={Physics} class="logo" />
                   <h3>Physics Department</h3>
                 </div>
               </div>
@@ -160,7 +158,7 @@ export default function StudentDashboard() {
             >
               <div class="main">
                 <div class="card">
-                  <img src="/Assets/Images/statistics_logo.jpg" class="logo" />
+                  <img src={Statistics} class="logo" />
                   <h3>Statistics Department</h3>
                 </div>
               </div>

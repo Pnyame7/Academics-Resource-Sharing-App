@@ -3,7 +3,13 @@ import { Link, useNavigate } from "react-router-dom";
 import { useSnackbar } from "notistack";
 import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
+import {
+  faArrowRightFromBracket,
+  faUser,
+  faGrip,
+  faComments,
+  faTicket,
+} from "@fortawesome/free-solid-svg-icons";
 import { useAuthContext } from "../Components/authContext";
 
 export default function SideBar() {
@@ -25,81 +31,41 @@ export default function SideBar() {
     }
   };
   return (
-    <div className="h-screen overflow-y-auto overflow-x-hidden sticky top-0">
-      {/* // <div> */}
-      <nav className="studentNav">
-        <p>Student Dashboard</p>
+    <div className="h-screen overflow-y-auto overflow-x-hidden sticky top-0 bg-blue-500 w-56">
+      <nav className="">
+        <p className="text-xl bg-gray-100 text-center">Student Dashboard</p>
         <ul>
-          <li>
-            <Link to="/student/dashboard">
-              <img
-                src="/Assets/Images/Dashboard.png"
-                alt=""
-                class="dashboard"
+          <li className="hover:text-red-400 hover:bg-white">
+            <Link to="/student/dashboard" className="navSide">
+              <FontAwesomeIcon icon={faGrip} className="navSideIcons" />
+              <span className="navSideText">Dashboard</span>
+            </Link>
+          </li>
+          <li className="hover:text-red-400 hover:bg-white">
+            <Link to="/discussionforum" className="navSide">
+              <FontAwesomeIcon icon={faComments} className="navSideIcons" />
+              <span className="navSideText">Discussion Forum</span>
+            </Link>
+          </li>
+          <li className="hover:text-red-400 hover:bg-white">
+            <Link to="/feedback" className="navSide">
+              <FontAwesomeIcon icon={faTicket} className="navSideIcons" />
+              <span className="navSideText">Feedback & Support</span>
+            </Link>
+          </li>
+          <li className="hover:text-red-400 hover:bg-white">
+            <Link to="/profile" className="navSide">
+              <FontAwesomeIcon icon={faUser} className="navSideIcons" />
+              <span className="navSideText">Profile</span>
+            </Link>
+          </li>
+          <li className="hover:text-red-400 hover:bg-white">
+            <button onClick={handleLogout} className="navSide">
+              <FontAwesomeIcon
+                icon={faArrowRightFromBracket}
+                className="navSideIcons"
               />
-              <span class="img-text">Dashboard</span>
-            </Link>
-          </li>
-          <li>
-            <Link to="/discussionforum">
-              <img src="/Assets/Images/Forum.png" alt="" class="forum" />
-              <span class="img-text">Discussion Forum</span>
-            </Link>
-          </li>
-          <li>
-            <Link to="">
-              <img
-                src="/Assets/Images/Notification.png"
-                alt=""
-                class="notification"
-              />
-              <span class="img-text">Notification</span>
-            </Link>
-          </li>
-          <li>
-            <Link to="">
-              <img
-                src="/Assets/Images/Notification.png"
-                alt=""
-                class="notification"
-              />
-              <span class="img-text">Study Group</span>
-            </Link>
-          </li>
-          <li>
-            <Link to="/feedback">
-              <img
-                src="/Assets/Images/Notification.png"
-                alt=""
-                class="notification"
-              />
-              <span class="img-text">Feedback & Support</span>
-            </Link>
-          </li>
-          <li>
-            <Link to="">
-              <img
-                src="/Assets/Images/Notification.png"
-                alt=""
-                class="notification"
-              />
-              <span class="img-text">Upload Resource</span>
-            </Link>
-          </li>
-          <li>
-            <Link to="/profile">
-              <img
-                src="/Assets/Images/Notification.png"
-                alt=""
-                class="notification"
-              />
-              <span class="img-text">Profile</span>
-            </Link>
-          </li>
-          <li>
-            <button onClick={handleLogout}>
-              <img src="/Assets/Images/Logout.png" alt="" class="logout" />
-              <span class="img-text">Logout</span>
+              <span className="navSideText">Logout</span>
             </button>
           </li>
         </ul>

@@ -130,3 +130,13 @@
   height: 30px;
   border-radius: 50px;
 }
+
+.navSide {
+  @apply flex items-center px-2 py-5;
+}
+.navSideIcons {
+  @apply text-2xl;
+}
+.navSideText {
+  @apply ml-2;
+}
