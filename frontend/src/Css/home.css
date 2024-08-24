@@ -44,15 +44,13 @@ html {
 
 .sidebar {
   position: fixed;
-  top: 30px;
+  top: 50px;
   left: 0;
   width: 150px;
   height: 150px;
   z-index: 99;
-  background-color: #222222c5;
-  backdrop-filter: blur(10px);
-  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
-  display: none;
+  background-color: white;
+  color: #333;
 }
 
 .sidebar ul {
@@ -71,8 +69,9 @@ html {
   width: 100%;
 }
 
-.sidebar li a span {
+.sidebar li span {
   margin-left: 120px;
+  color: #333;
 }
 
 .sidebar a:hover {
