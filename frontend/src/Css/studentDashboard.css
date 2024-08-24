@@ -64,9 +64,9 @@
   margin-left: 20px;
 }
 
-/* .studentNav li:nth-of-type(4) {
+.studentNav li:nth-of-type(4) {
   margin-top: 380px;
-} */
+}
 
 .studentNav a:hover {
   background-color: #dfedf5;
@@ -129,14 +129,23 @@
   width: 30px;
   height: 30px;
   border-radius: 50px;
+  margin-left: 90px;
 }
 
 .navSide {
-  @apply flex items-center px-2 py-5;
+  display: flex;
+  align-items: center;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
 }
+
 .navSideIcons {
-  @apply text-2xl;
+  font-size: 1.5rem; /* text-2xl */
 }
+
 .navSideText {
-  @apply ml-2;
+  margin-left: 0.5rem; /* ml-2 */
+  font-weight: 500; /* font-medium */
 }
