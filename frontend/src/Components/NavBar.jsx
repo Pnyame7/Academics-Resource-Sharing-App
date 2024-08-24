@@ -103,9 +103,6 @@ export default function NavBar() {
           <li>
             <Link to="/student/dashboard">Student dashboard</Link>
           </li>
-          <li>
-            <a href="/templates/Admin_dashboard.html">Admin dashboard</a>
-          </li>
         </ul>
       </div>
     </div>
