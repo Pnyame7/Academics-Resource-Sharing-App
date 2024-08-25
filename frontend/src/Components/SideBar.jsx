@@ -9,6 +9,7 @@ import {
   faGrip,
   faComments,
   faTicket,
+  faUserPen,
 } from "@fortawesome/free-solid-svg-icons";
 import { useAuthContext } from "../Components/authContext";
 
@@ -61,7 +62,7 @@ export default function SideBar() {
           </li>
           <li className="hover:text-red-400 hover:bg-white">
             <Link to="/edit-profile" className="navSide">
-              <FontAwesomeIcon icon={faUser} className="navSideIcons" />
+              <FontAwesomeIcon icon={faUserPen} className="navSideIcons" />
               <span className="navSideText">Edit Profile</span>
             </Link>
           </li>

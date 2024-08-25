@@ -63,16 +63,34 @@ export default function DiscussionMessages({
             >
               <div className="ml-4 w-10/12 relative">
                 {displayDate && <p className="text-center">{messageDate}</p>}
-                <p className="text-primary-400 font-bold w-full">
-                  {message.userId.username}
-                </p>
+                <div className="flex">
+                  <div className="flex flex-col items-center rounded-full overflow-hidden border-2 border-red-400 w-12 h-12 bg-secondary-100 mr-2">
+                    {message.userId.image !== "" ? (
+                      <img
+                        src={`http://localhost:3000/uploads/${message.userId.image}`}
+                        alt="profile"
+                        className="w-32 h-32 object-contain"
+                      />
+                    ) : (
+                      <FontAwesomeIcon
+                        icon={faUser}
+                        className="w-32 h-32 object-contain"
+                      />
+                    )}
+                  </div>
+                  <div>
+                    <p className="text-primary-400 font-bold w-full">
+                      {message.userId.username}
+                    </p>
+                    <p className="text-sm text-gray-400">
+                      <span>
+                        <FontAwesomeIcon icon={faClock} className="mr-1" />
+                        {timeOnly(message.createdAt)}
+                      </span>
+                    </p>
+                  </div>
+                </div>
                 <p className="whitespace-pre-wrap">{message.message}</p>
-                <p className="absolute text-sm text-gray-400 right-0">
-                  <span>
-                    <FontAwesomeIcon icon={faClock} className="mr-1" />
-                    {timeOnly(message.createdAt)}
-                  </span>
-                </p>
               </div>
             </div>
           );

@@ -1,10 +1,9 @@
-import React from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { useSnackbar } from "notistack";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSquarePlus, faTimes } from "@fortawesome/free-solid-svg-icons";
-import { Link, useNavigate } from "react-router-dom";
+// import { Link, useNavigate } from "react-router-dom";
 import SideBar from "../Components/SideBar";
 import { formatCreationTime } from "../Components/extractTime";
 import DiscussionMessages from "../Components/DiscussionMessages";
@@ -18,7 +17,7 @@ export default function DiscussionForum() {
   const [selectedTopic, setSelectedTopic] = useState(null);
   const [sendId, setSendId] = useState(null);
   const [userObject, setUserObject] = useState({});
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   useEffect(() => {
     const fetchTopics = async () => {
@@ -60,11 +59,10 @@ export default function DiscussionForum() {
       {/* {true && ( */}
       {showPost && (
         <>
-          <div className="fixed bg-black bg-opacity-50 h-screen w-screen flex justify-center items-center">
+          <div className="fixed bg-black bg-opacity-50 h-screen w-screen flex justify-center items-center z-10">
             <form
               className="bg-white p-5 rounded-md flex flex-col w-1/3 -translate-y-1/2"
-              on
-              //   onSubmit={handleCreateTopic}
+              onSubmit={handleCreateTopic}
             >
               <FontAwesomeIcon
                 icon={faTimes}
@@ -79,7 +77,7 @@ export default function DiscussionForum() {
               />
               <button
                 className="bg-green-700 p-2 w-20 my-2 mx-auto rounded-lg hover:text-white"
-                onClick={handleCreateTopic}
+                // onClick={handleCreateTopic}
               >
                 Sumbit
               </button>
@@ -87,9 +85,9 @@ export default function DiscussionForum() {
           </div>{" "}
         </>
       )}
-      <div class="sidebar_container">
+      <div className="sidebar_container">
         <SideBar />
-        <div class="w-full flex items-center">
+        <div className="w-full flex items-center">
           <div className="w-1/4 h-[40rem] border-red-500 border rounded-lg overflow-y-auto">
             <div className="flex justify-between px-3 py-2 bg-gray-300 items-center sticky top-0 border-b border-green-400">
               <p className="text-lg font-bold">Topics</p>

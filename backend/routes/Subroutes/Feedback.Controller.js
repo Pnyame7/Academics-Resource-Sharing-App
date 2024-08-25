@@ -23,8 +23,8 @@ export const CreateFeedback = async (req, res) => {
 export const GetFeedback = async (req, res) => {
   try {
     const feedback = await Feedback.find()
-      .sort({ createdAt: -1 })
-      .populate("userId", "username");
+      .sort({ updatedAt: -1 })
+      .populate("userId", "username image");
     res.status(200).json(feedback);
   } catch (error) {
     res

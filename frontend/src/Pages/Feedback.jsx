@@ -59,22 +59,26 @@ export default function Feedback() {
             {feedbacks.map((feedback, index) => (
               <div key={index} className="bg-gray-100 m-2 p-2 rounded-md">
                 <div className="flex items-center bg-white">
-                  {feedback.userId.image !== "" ? (
-                    <img
-                      src={`http://localhost:3000/uploads/${feedback.userId.image}`}
-                      alt="profile"
-                      className="w-32 h-32 md:w-52 md:h-52 object-contain"
-                    />
-                  ) : (
-                    <FontAwesomeIcon
-                      icon={faUser}
-                      className="w-32 h-32 sm:w-40 sm:h-40 object-contain"
-                    />
-                  )}
-                  <p>{feedback.userId.username}</p>
-                  <p className="text-xs ml-5 italic">
-                    {formatCreationTime(feedback.createdAt)}
-                  </p>
+                  <div className="flex flex-col items-center rounded-full overflow-hidden border-2 border-red-400 w-12 h-12 bg-secondary-100 mr-2">
+                    {feedback.userId.image !== "" ? (
+                      <img
+                        src={`http://localhost:3000/uploads/${feedback.userId.image}`}
+                        alt="profile"
+                        className="w-32 h-32 object-contain"
+                      />
+                    ) : (
+                      <FontAwesomeIcon
+                        icon={faUser}
+                        className="w-32 h-32 object-contain"
+                      />
+                    )}
+                  </div>
+                  <div>
+                    <p>{feedback.userId.username}</p>
+                    <p className="text-xs italic">
+                      {formatCreationTime(feedback.createdAt)}
+                    </p>
+                  </div>
                 </div>
                 <p className="font-semibold">{feedback.topic}</p>
                 <p className="whitespace-pre-line">{feedback.message}</p>
