@@ -123,12 +123,12 @@ export default function EditProfile() {
               Remove Image
             </p>
           </div>
-          <div className="my-2 sm:my-3 mt-5 sm:mt-7 w-10/12 md:w-2/3 xl:w-1/2">
+          <div className="my-2 sm:my-3 w-10/12 md:w-2/3 xl:w-1/2">
             <label htmlFor="username">User Name</label>
             <input
               type="text"
               name="username"
-              id="username"
+              // id="username"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
               placeholder="Username"
@@ -140,7 +140,7 @@ export default function EditProfile() {
             <input
               type="email"
               name="email"
-              id="email"
+              // id="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Email"
@@ -160,16 +160,15 @@ export default function EditProfile() {
             />
           </div>
           <div className="my-2 sm:my-3 w-10/12 md:w-2/3 xl:w-1/2">
-            <label htmlFor="studentID">studentID</label>
-            <textarea
+            <label htmlFor="studentID">StudentID</label>
+            <input
               type="number"
               name="studentID"
               id="studentID"
               value={studentID}
               onChange={(e) => setStudentID(e.target.value)}
               placeholder="studentID"
-              className="loginInput h-20 sm:h-32"
-              style={{ resize: "none" }}
+              className="loginInput"
             />
           </div>
           <button className="btnSubmit w-10/12 md:w-2/3 xl:w-1/2 my-2 sm:my-3 mb-5 sm:mb-7">

@@ -1,10 +1,8 @@
-import React from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { useSnackbar } from "notistack";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSquarePlus, faTimes } from "@fortawesome/free-solid-svg-icons";
-import { Link, useNavigate } from "react-router-dom";
+import { faUser } from "@fortawesome/free-solid-svg-icons";
 
 import SideBar from "../Components/SideBar";
 import { formatCreationTime } from "../Components/extractTime";
@@ -14,7 +12,6 @@ export default function Feedback() {
   const [topic, setTopic] = useState("");
   const [message, setMessage] = useState("");
   const { enqueueSnackbar } = useSnackbar();
-  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchFeedback = async () => {
@@ -54,14 +51,26 @@ export default function Feedback() {
   };
   return (
     <div>
-      <div class="sidebar_container">
+      <div className="sidebar_container">
         <SideBar />
-        <div class="w-full relative mx-3 mt-3">
+        <div className="w-full relative mx-3 mt-3">
           {/* Show Feedback */}
           <div className="border border-red-400 overflow-y-auto h-[32rem] my-2 rounded-md overflow-hidden">
             {feedbacks.map((feedback, index) => (
               <div key={index} className="bg-gray-100 m-2 p-2 rounded-md">
                 <div className="flex items-center bg-white">
+                  {feedback.userId.image !== "" ? (
+                    <img
+                      src={`http://localhost:3000/uploads/${feedback.userId.image}`}
+                      alt="profile"
+                      className="w-32 h-32 md:w-52 md:h-52 object-contain"
+                    />
+                  ) : (
+                    <FontAwesomeIcon
+                      icon={faUser}
+                      className="w-32 h-32 sm:w-40 sm:h-40 object-contain"
+                    />
+                  )}
                   <p>{feedback.userId.username}</p>
                   <p className="text-xs ml-5 italic">
                     {formatCreationTime(feedback.createdAt)}
