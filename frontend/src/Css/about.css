@@ -104,9 +104,15 @@ html {
   width: 60%;
   margin-left: 150px;
   border-radius: 15px;
-  padding: 5px;
+  padding: 10px;
 }
 
+.Antonio_munroe p,
+.Micheal_Brown p,
+.Joseph_Ewool p,
+.Brian_smith p {
+  width: 65%;
+}
 .Antonio_munroe img,
 .Micheal_Brown img,
 .Joseph_Ewool img,

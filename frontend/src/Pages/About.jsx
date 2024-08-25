@@ -12,7 +12,7 @@ export default function About() {
     <div>
       <NavBar />
       <div class="coslib_img">
-        <h1>About us</h1>
+        <h1 className="text-6xl">About us</h1>
       </div>
 
       <div class="history">
