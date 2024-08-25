@@ -5,6 +5,7 @@ import COSLogo from "../assets/Images/COS LOG.png";
 import Logo from "../assets/Images/logo.png";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuthContext } from "../Components/authContext";
+// import "../Css/register.css";
 
 export default function Login() {
   const [username, setUserName] = useState("");
@@ -41,7 +42,7 @@ export default function Login() {
     }
   };
   return (
-    <div>
+    <div className="registerBody">
       <div class="login_page">
         <div class="main_interface">
           <div class="left_side">
