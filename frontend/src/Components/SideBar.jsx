@@ -60,6 +60,12 @@ export default function SideBar() {
             </Link>
           </li>
           <li className="hover:text-red-400 hover:bg-white">
+            <Link to="/edit-profile" className="navSide">
+              <FontAwesomeIcon icon={faUser} className="navSideIcons" />
+              <span className="navSideText">Edit Profile</span>
+            </Link>
+          </li>
+          <li className="hover:text-red-400 hover:bg-white">
             <button onClick={handleLogout} className="navSide">
               <FontAwesomeIcon
                 icon={faArrowRightFromBracket}

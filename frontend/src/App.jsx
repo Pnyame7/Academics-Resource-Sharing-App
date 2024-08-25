@@ -1,4 +1,3 @@
-import { useState } from "react";
 import "./App.css";
 import Home from "./Pages/Home";
 import About from "./Pages/About";
@@ -6,6 +5,7 @@ import { Route, Routes } from "react-router-dom";
 import Register from "./Pages/Register";
 import Login from "./Pages/Login";
 import Profile from "./Pages/Profile";
+import EditProfile from "./Pages/EditProfile";
 import StudentDashboard from "./Pages/StudentDashboard";
 import DiscussionForum from "./Pages/DiscussionForum";
 import Feedback from "./Pages/Feedback";
@@ -19,6 +19,7 @@ function App() {
       <Route path="/register" element={<Register />} />
       <Route path="/login" element={<Login />} />
       <Route path="/profile" element={<Profile />} />
+      <Route path="/edit-profile" element={<EditProfile />} />
       <Route
         path="/student/dashboard"
         // element={auth ? <StudentDashboard /> : <Login />}
