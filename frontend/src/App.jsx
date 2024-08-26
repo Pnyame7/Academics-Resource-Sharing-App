@@ -18,15 +18,25 @@ function App() {
       <Route path="/about" element={<About />} />
       <Route path="/register" element={<Register />} />
       <Route path="/login" element={<Login />} />
-      <Route path="/profile" element={<Profile />} />
-      <Route path="/edit-profile" element={<EditProfile />} />
+      <Route
+        path="/profile"
+        //  element={<Profile />} />
+        element={auth ? <Profile /> : <Login />}
+      />
+      <Route
+        path="/edit-profile"
+        element={auth ? <EditProfile /> : <Login />}
+      />
       <Route
         path="/student/dashboard"
-        // element={auth ? <StudentDashboard /> : <Login />}
-        element={<StudentDashboard />}
+        element={auth ? <StudentDashboard /> : <Login />}
+        // element={<StudentDashboard />}
       />
-      <Route path="/discussionforum" element={<DiscussionForum />} />
-      <Route path="/feedback" element={<Feedback />} />
+      <Route
+        path="/discussionforum"
+        element={auth ? <DiscussionForum /> : <Login />}
+      />
+      <Route path="/feedback" element={auth ? <Feedback /> : <Login />} />
     </Routes>
   );
 }
