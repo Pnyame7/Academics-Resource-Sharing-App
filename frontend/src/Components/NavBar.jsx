@@ -98,7 +98,7 @@ export default function NavBar() {
         </div>
       </header>
       {/* Style for This */}
-      <div class={`${showMenu ? "sidebar" : ""}`}>
+      <div className={`${showMenu ? "hidden" : "sidebar"}`}>
         <ul>
           <li>
             <Link to="/student/dashboard">Student dashboard</Link>
