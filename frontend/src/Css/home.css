@@ -241,11 +241,11 @@ html {
 
 .content h1 {
   text-align: center;
-  font-size: 40px;
+  font-size: 35px;
 }
 
 .content p {
-  font-size: 25px;
+  font-size: 20px;
 }
 
 /* Purpose Styles */
@@ -300,6 +300,7 @@ html {
 .mission h2,
 .goals h2 {
   text-align: center;
+  font-size: xx-large;
 }
 
 .goals ul {
@@ -321,6 +322,7 @@ html {
 
 .features h2 {
   padding-left: 200px;
+  font-size: xx-large;
 }
 
 .features_list {
@@ -346,6 +348,7 @@ html {
 .testimonials h1 {
   text-align: center;
   margin-bottom: 50px;
+  font-size: xx-large;
 }
 
 .Jane_doe,
